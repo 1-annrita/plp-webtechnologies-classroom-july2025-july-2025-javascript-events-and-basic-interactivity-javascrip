@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Event handling in JS, Interactive Elements and Form validation
+    </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <!-- 1. Event handling for buttons, inputs, or links -->
+
+    <!-- button -->
+    <button id="myButton" onclick="changeColor()">Change color!</button>
+
+    <!-- input -->
+    <input
+      type="text"
+      id="input1"
+      onfocus="this.style.background='pink';"
+      onblur="this.style.background='yellow';"
+      placeholder="Focus/blur to change color"
+    />
+
+    <hr />
+
+    <!--2.  At least 2 interactive features created from scratch -->
+
+    <!-- Dark mode toggle -->
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    <hr />
+
+    <!-- Carousel => Image slideshow -->
+
+    <div id="carousel">
+      <img
+        id="carouselImage"
+        src="imagess/code_girl.jpg"
+        alt="carousel image"
+      />
+      <hr />
+      <button onclick="prevImage()"> << </button>
+      <button onclick="nextImage()"> >> </button>
+    </div>
+
+    <hr />
+
+    <!-- 3. A fully functioning custom form validation (no HTML5-only validation) -->
+    <form id="myForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" />
+      <span id="usernameError" class="error"></span>
+      <br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+      <span id="emailError" class="error"></span>
+      <br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <span id="passwordError" class="error"></span>
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
